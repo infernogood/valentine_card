@@ -2,7 +2,7 @@ let currentQuestion = 0;
 let correctAnswers = 0;
 const questions = [
     {
-        image: "images/question1.jpg",
+        image: "question1.jpg",
         text: "Что мы сейчас будем делать?",
         answers: [
             { text: "Тыкать кнопочки на рандом", correct: false },
