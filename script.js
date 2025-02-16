@@ -79,7 +79,7 @@ document.getElementById('valentineGif').addEventListener('click', function() {
 
 function loadQuestion(questionIndex) {
     const question = questions[questionIndex];
-    document.getElementById('questionImage').src = `/static/images/${question.image}`;
+    document.getElementById('questionImage').src = `images/${question.image}`;
     document.getElementById('questionText').textContent = question.text;
     const answersDiv = document.getElementById('answers');
     answersDiv.innerHTML = '';
