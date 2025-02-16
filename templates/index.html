@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валентинка для Сонечки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div id="startScreen">
+            <img id="valentineGif" src="{{ url_for('static', filename='images/valentine.gif') }}" alt="Valentine GIF">
+            <p id="caption">Ты будешь моим котенком?</p>
+        </div>
+        <div id="quiz" style="display:none;">
+            <img id="questionImage" src="" alt="Question Image">
+            <p id="questionText"></p>
+            <div id="answers"></div>
+            <p id="result"></p>
+            <button id="nextQuestion" onclick="nextQuestion()">Следующий вопрос</button>
+            <button id="retryQuestion" onclick="retryQuestion()">Ответить еще раз</button>
+        </div>
+        <div id="finalScreen" style="display:none;">
+    <h1>Какая умничка!</h1>
+    <img id="finalGif" src="{{ url_for('static', filename='images/final_gif.gif') }}" alt="Final GIF">
+    <p id="finalResult"></p>
+    <p>Ты заслужила валентинку на память)</p>
+    <a id="downloadLink" href="{{ url_for('static', filename='images/valentine_card.jpg') }}" download="valentine_card.jpg">Скачать валентинку</a>
+    <a id="stickerLink" href="https://t.me/addstickers/valentine_140225" target="_blank">Получить стикер в Telegram</a>
+</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
